@@ -5,8 +5,9 @@
     overflow: hidden;
   background: #0f0f10;
 
-    img{
-      object-fit: cover;
+    .backgroundImage{
+      object-fit: contain;
+      object-position: center center;
     }
     
     .sliderContainer{

@@ -46,8 +46,11 @@ export default function Home() {
   return (
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
       <Image 
-        src="/images/hero.png"
+        src="/images/hdx.png"
         fill={true}
+        priority
+        sizes="100vw"
+        className={styles.backgroundImage}
         alt="background"
       />
       <div className={styles.sliderContainer}>
