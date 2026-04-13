@@ -5,11 +5,11 @@ import { slideUp, opacity } from './animation';
 import Rounded from '../../common/RoundedButton';
 export default function index() {
 
-    const phrase = "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
+    const phrase = "I build high-performance products powered by modern web engineering and practical GenAI systems. From idea to launch, I focus on impact, speed, and quality.";
     const description = useRef(null);
     const isInView = useInView(description)
     return (
-        <div ref={description} className={styles.description}>
+        <div id="about" ref={description} className={styles.description}>
             <div className={styles.body}>
                 <p>
                 {
@@ -18,10 +18,10 @@ export default function index() {
                     })
                 }
                 </p>
-                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</motion.p>
+                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>I am Zaid Rakhange, GenAI Engineer and founder of The Impic Labs, helping teams ship better products with TypeScript, React, Next.js, Node.js, and AI automation.</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
-                        <p>About me</p>
+                        <p>My Story</p>
                     </Rounded>
                 </div>
             </div>

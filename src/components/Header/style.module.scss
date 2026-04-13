@@ -4,10 +4,10 @@
     z-index: 1;
     top: 0;
     color: white;
-    padding: 35px;
+    padding: clamp(16px, 3vw, 35px);
     justify-content: space-between;
     width: 100%;
-    font-weight: 300;
+    font-weight: 500;
     box-sizing: border-box;
     align-items: center;
     
@@ -33,7 +33,7 @@
                 }
                 &:nth-of-type(3){
                     position: absolute;
-                    left: 120px;
+                    left: 96px;
                     padding-left: 0.3em;
                 }
             }
@@ -48,10 +48,10 @@
                     transform: translateX(-100%);
                 }
                 .dennis{
-                    transform: translateX(-65px);
+                    transform: translateX(-54px);
                 }
                 .snellenberg{
-                    transform: translateX(-65px);
+                    transform: translateX(-54px);
                 }
             }
         }
@@ -86,8 +86,16 @@
         }
         a{
             cursor: pointer;
+            font-size: 14px;
+            letter-spacing: 0.02em;
         }
     } 
+
+    @media (max-width: 900px) {
+        .nav {
+            display: none;
+        }
+    }
 }
 .headerButtonContainer{
     transform: scale(0);

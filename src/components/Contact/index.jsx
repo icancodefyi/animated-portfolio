@@ -15,7 +15,7 @@ export default function index() {
     const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
     const rotate = useTransform(scrollYProgress, [0, 1], [120, 90])
     return (
-        <motion.div style={{y}} ref={container} className={styles.contact}>
+        <motion.div id="contact" style={{y}} ref={container} className={styles.contact}>
             <div className={styles.body}>
                 <div className={styles.title}>
                     <span>
@@ -26,12 +26,12 @@ export default function index() {
                             src={`/images/background.jpg`}
                             />
                         </div>
-                        <h2>Let's work</h2>
+                        <h2>Let's build</h2>
                     </span>
-                    <h2>together</h2>
+                    <h2>something bold</h2>
                     <motion.div style={{x}} className={styles.buttonContainer}>
                         <Rounded  backgroundColor={"#334BD3"} className={styles.button}>
-                            <p>Get in touch</p>
+                            <p>Start a Project</p>
                         </Rounded>
                     </motion.div>
                     <motion.svg style={{rotate, scale: 2}} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,38 +40,38 @@ export default function index() {
                 </div>
                 <div className={styles.nav}>
                         <Rounded>
-                            <p>info@dennissnellenberg.com</p>
+                            <p>zaid@impiclabs.com</p>
                         </Rounded>
                         <Rounded>
-                            <p>+31 6 27 84 74 30</p>
+                            <p>+91 90289 68349</p>
                         </Rounded>
                 </div>
                 <div className={styles.info}>
                     <div>
                         <span>
-                            <h3>Version</h3>
-                            <p>2022 © Edition</p>
+                            <h3>Location</h3>
+                            <p>Mumbai, India</p>
                         </span>
                         <span>
-                            <h3>Version</h3>
-                            <p>11:49 PM GMT+2</p>
+                            <h3>Focus</h3>
+                            <p>GenAI and Product Engineering</p>
                         </span>
                     </div>
                     <div>
                         <span>
                             <h3>socials</h3>
                             <Magnetic>
-                                <p>Awwwards</p>
+                                <a href="https://github.com/icancodefyi" target="_blank" rel="noreferrer">GitHub</a>
                             </Magnetic>
                         </span>
                         <Magnetic>
-                            <p>Instagram</p>
+                            <a href="https://www.linkedin.com/in/rakhangezaid/" target="_blank" rel="noreferrer">LinkedIn</a>
                         </Magnetic>
                         <Magnetic>
-                            <p>Dribbble</p>
+                            <a href="https://x.com/zaid_suiii" target="_blank" rel="noreferrer">X</a>
                         </Magnetic>
                         <Magnetic>
-                            <p>Linkedin</p>
+                            <a href="https://www.instagram.com/zaid_suiii/" target="_blank" rel="noreferrer">Instagram</a>
                         </Magnetic>
                     </div>
                 </div>

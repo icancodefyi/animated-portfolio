@@ -9,22 +9,22 @@ import Rounded from '../../common/RoundedButton';
 
 const projects = [
   {
-    title: "C2 Montreal",
+    title: "Layered",
     src: "c2montreal.png",
     color: "#000000"
   },
   {
-    title: "Office Studio",
+    title: "Devfund",
     src: "officestudio.png",
     color: "#8C8C8C"
   },
   {
-    title: "Locomotive",
+    title: "Airlist",
     src: "locomotive.png",
     color: "#EFE8D3"
   },
   {
-    title: "Silencio",
+    title: "Roots and Roofs",
     src: "silencio.png",
     color: "#706D63"
   }
@@ -77,7 +77,7 @@ export default function Home() {
   }
 
   return (
-  <main onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}} className={styles.projects}>
+  <main id="projects" onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}} className={styles.projects}>
     <div className={styles.body}>
       {
         projects.map( (project, index) => {
@@ -86,7 +86,7 @@ export default function Home() {
       }
     </div>
     <Rounded>
-      <p>More work</p>
+      <p>View All Projects</p>
     </Rounded>
     <>
         <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
