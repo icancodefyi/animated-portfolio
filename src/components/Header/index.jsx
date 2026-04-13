@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
 
-export default function index() {
+export default function Header() {
     const header = useRef(null);
     const [isActive, setIsActive] = useState(false);
     const pathname = usePathname();
@@ -17,7 +17,7 @@ export default function index() {
 
     useEffect( () => {
       if(isActive) setIsActive(false)
-    }, [pathname])
+        }, [pathname, isActive])
 
     useLayoutEffect( () => {
         gsap.registerPlugin(ScrollTrigger)
@@ -27,7 +27,10 @@ export default function index() {
                 start: 0,
                 end: window.innerHeight,
                 onLeave: () => {gsap.to(button.current, {scale: 1, duration: 0.25, ease: "power1.out"})},
-                onEnterBack: () => {gsap.to(button.current, {scale: 0, duration: 0.25, ease: "power1.out"},setIsActive(false))}
+                onEnterBack: () => {
+                    gsap.to(button.current, {scale: 0, duration: 0.25, ease: "power1.out"})
+                    setIsActive(false)
+                }
             }
         })
     }, [])
