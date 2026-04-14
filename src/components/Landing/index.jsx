@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
       <Image 
-        src="/images/hdx.png"
+        src="/images/hero-image.jpeg"
         fill={true}
         priority
         sizes="100vw"
